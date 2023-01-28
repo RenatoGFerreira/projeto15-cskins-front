@@ -1,13 +1,15 @@
-import { ScreenContainer, LogoContainer, BarContainer, InputContainer, SignUpContainer, ContainerSignInPq, ContainerSignUpPq} from "./StyledHeader.js"
+import { ScreenContainer, LogoContainer, BarContainer, InputContainer, SignUpContainer} from "./StyledHeader.js"
 import { Link } from "react-router-dom"
 import { useState } from "react"
+import SignIn from "../SIgnIn/SIgnIn.js"
+import SignUp from "../SIgnUp/SIgnUp.js"
+
 
 
 export default function Header() {
 
     const [showSignIn, setShowSignIn] = useState(false)
     const [showSignUp, setShowSignUp] = useState(false)
-
 
     return (
         <ScreenContainer>
@@ -37,32 +39,8 @@ export default function Header() {
                 </SignUpContainer>
             </BarContainer>
 
-            <ContainerSignInPq showSignIn={showSignIn}>
-                <form>
-                    <input></input>
-                    <input></input>
-                    <button>Entrar</button>
-                </form>
-                <button onClick={() => {
-                    setShowSignIn(!showSignIn)
-                    setShowSignUp(false)
-                }}>Cancelar</button>
-            </ContainerSignInPq> 
-
-            <ContainerSignUpPq showSignUp={showSignUp}>
-                <form>
-                    <input></input>
-                    <input></input>
-                    <input></input>
-                    <input></input>
-                    <button>Cadastrar</button>
-                </form>
-                <button onClick={() => {
-                    setShowSignUp(!showSignUp)
-                    setShowSignIn(false)
-                }}>Cancelar</button>
-            </ContainerSignUpPq>
+            <SignIn showSignIn={showSignIn} setShowSignIn={setShowSignIn} setShowSignUp={setShowSignUp}/>
+            <SignUp showSignUp={showSignUp} setShowSignIn={setShowSignIn} setShowSignUp={setShowSignUp}/>
         </ScreenContainer>
     )
 }
-
