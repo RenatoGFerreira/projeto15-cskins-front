@@ -1,6 +1,6 @@
 import { ProductsContainer, ProductCard, ButtonBuy } from "./StyledHome.js";
 import  Header from "../../components/Header/Header"
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import BASE_URL from "../../constants/url.js"
 import products from "../../constants/products.js"
@@ -18,7 +18,6 @@ export default function Home() {
     // }, [])
 
     
-
     return (
         <>
             <Header/>
