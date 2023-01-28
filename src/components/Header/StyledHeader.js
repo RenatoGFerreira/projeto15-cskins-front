@@ -16,7 +16,11 @@ export const LogoContainer = styled.div`
     align-items: center;
     span{
         font-family: 'Saira Stencil One', cursive;
-        font-size: 45px;
+        font-size: 45px;   
+    }
+    a{
+        text-decoration: none;
+        color: #000;
     }
 `
 export const BarContainer = styled.div`

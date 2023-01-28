@@ -12,8 +12,10 @@ export default function Header() {
     return (
         <ScreenContainer>
             <LogoContainer>
+                <Link to="">
                 <span>CSkins</span>
                 <p>The best site skin buy.</p>
+                </Link>
             </LogoContainer>
             <BarContainer>
                 <InputContainer>
